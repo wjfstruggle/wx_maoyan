@@ -1,0 +1,31 @@
+<!--电影首页-->
+<view id="movieList" hover-class="none" hover-stop-propagation="false">
+	<view class="list-wrapp">
+		<block wx:for="{{movieList}}" wx:for-item="movie" wx:key="index">
+			<view class="list-item">
+				<view class="img">
+					<image class="" src="{{movie.img}}" mode="widthFix"></image>
+				</view>
+				<view class="content">
+					<view class="nm-wrap">
+						<text class="nm">{{movie.nm}}</text>
+						<view class="icon-2d"></view>
+						<view class="icon-3d"></view>
+					</view>
+					<view class="info">
+						<view class="sore">
+							<text class="text" wx:if="{{movie.sc > 0}}">观众评</text>
+							<text class="sc" wx:if="{{movie.sc > 0}}">{{movie.sc}}</text>
+							<text class="text" wx:else >暂无评分</text>
+						</view>
+						<view class="star textOverflow">{{movie.star}}</view>
+						<view class="showInfo">{{movie.showInfo}}</view>
+					</view>
+					<view class="btn">
+						<!-- <button>购票</button> -->
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</view>
