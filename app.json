@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/tabBar/movie/movie",
+    "pages/tabBar/cinema/cinema",
+    "pages/tabBar/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e54847",
+    "navigationBarTitleText": "猫眼电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#f03d37",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/movie/movie",
+        "text": "电影",
+        "iconPath": "assests/icon/movie.png",
+        "selectedIconPath": "assests/icon/movie-active.png"
+      },
+      {
+        "pagePath": "pages/tabBar/cinema/cinema",
+        "text": "影院",
+        "iconPath": "assests/icon/cinema.png",
+        "selectedIconPath": "assests/icon/cinema-active.png"
+      },
+      {
+        "pagePath": "pages/tabBar/mine/mine",
+        "text": "我的",
+        "iconPath": "assests/icon/mine.png",
+        "selectedIconPath": "assests/icon/mine-active.png"
+      }
+    ]
+  }
+}
