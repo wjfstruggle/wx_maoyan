@@ -9,8 +9,8 @@
 				<view class="content">
 					<view class="nm-wrap">
 						<text class="nm">{{movie.nm}}</text>
-						<view class="icon-2d"></view>
-						<view class="icon-3d"></view>
+						<!-- <view class="icon-2d" hidden="{{movie.version == v2d imax}}"></view> -->
+						<view class="icon-3d" hidden="{{movie.version == v3d}}"></view>
 					</view>
 					<view class="info">
 						<view class="sore">

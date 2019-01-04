@@ -27,6 +27,7 @@
     position: relative;
 }
 #movieList .content .nm-wrap {
+    display: flex;
     max-height: 24px;
     margin-bottom: 5px;
     line-height: 44rpx;
@@ -40,7 +41,18 @@
     flex-shrink: 1;
 }
 #movieList .content .nm-wrap .icon-2d {
-    background-image: url(../../../assests/movie/2d.png);
+    background-image: url(http://edu.bluej.cn/public/uploads/20190104/201901042139182d.png);
+    background-repeat:  no-repeat;
+    width: 86rpx;
+    height: 28rpx;
+    background-size: 86rpx 28rpx;
+    margin-top: 5px;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 3px;
+}
+#movieList .content .nm-wrap .icon-3d {
+    background-image: url(http://edu.bluej.cn/public/uploads/20190104/201901042140423d.png);
     background-repeat:  no-repeat;
     width: 86rpx;
     height: 28rpx;
