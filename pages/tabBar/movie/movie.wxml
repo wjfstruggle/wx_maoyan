@@ -1,31 +1,45 @@
-<!--电影首页-->
+<!-- 电影首页 -->
+<!-- 按钮 -->
+<import src="../../template/btn/btn.wxml" />
+<!-- 首页 -->
+<import src="../../template/movieIndex/movieIndex.wxml" />
 <view id="movieList" hover-class="none" hover-stop-propagation="false">
-	<view class="list-wrapp">
-		<block wx:for="{{movieList}}" wx:for-item="movie" wx:key="index">
-			<view class="list-item">
-				<view class="img">
-					<image class="" src="{{movie.img}}" mode="widthFix"></image>
+		<view class="top_wrap" hover-class="none" hover-stop-propagation="false">
+				<view class="city" hover-class="none" hover-stop-propagation="false">
+						<text>广州</text>
+						<text class="icon"></text>
 				</view>
-				<view class="content">
-					<view class="nm-wrap">
-						<text class="nm">{{movie.nm}}</text>
-						<!-- <view class="icon-2d" hidden="{{movie.version == v2d imax}}"></view> -->
-						<view class="icon-3d" hidden="{{movie.version == v3d}}"></view>
-					</view>
-					<view class="info">
-						<view class="sore">
-							<text class="text" wx:if="{{movie.sc > 0}}">观众评</text>
-							<text class="sc" wx:if="{{movie.sc > 0}}">{{movie.sc}}</text>
-							<text class="text" wx:else >暂无评分</text>
-						</view>
-						<view class="star textOverflow">{{movie.star}}</view>
-						<view class="showInfo">{{movie.showInfo}}</view>
-					</view>
-					<view class="btn">
-						<!-- <button>购票</button> -->
-					</view>
+				<view class="hotShow" hover-class="none" hover-stop-propagation="false">
+						<text class='hot {{switchItem===0 ? "active" :""}}' data-item='{{0}}' bind:tap="selectItem">正在热映</text>
+						<text class='hot {{switchItem===1 ? "active" :""}}' data-item='{{1}}' bind:tap="selectItem">即将上映</text>
 				</view>
+				<view class="" hover-class="none" hover-stop-propagation="false">搜索</view>
+		</view>
+		<view class="list-wrapp">
+			<view hidden="{{switchItem===1}}">
+					<template is="movieIndex" wx:for="{{movieList}}" wx:for-item="movie" wx:key="index" data='{{movie:movie}}'></template>
 			</view>
-		</block>
-	</view>
+			<view hidden="{{switchItem===0}}">
+				<view class="mostExpected">
+					<view class='title'>近期最受期待</view>
+						<scroll-view class='scroll-view_H' scroll-x
+							bindscrolltolower="lower">
+							<view class="scroll_view textOverflow" wx:for="{{mostExpectedList}}" wx:for-item="list" wx:key="index">
+									<view class="img" hover-class="none" hover-stop-propagation="false">
+										<image src='{{list.img}}' class='poster' mode="widthFix" lazy-load='{{true}}'></image>
+									</view>
+									<view class='name textOverflow'>{{list.nm}}</view>
+									<view class='data'>{{list.comingTitle}}</view>
+							</view>
+						</scroll-view>
+					</view>
+				</view>
+				<block wx:for='{{comingList}}' wx:for-item='movie' wx:key='{{movie.id}}'>
+					<block wx:if='{{index===0||comingList[index-1].comingTitle!==movie.comingTitle}}'>
+						<view class='title'>{{movie.comingTitle}}</view>
+						<template is='movieIndex' data='{{movie:movie,rt:true}}' />
+					</block>
+					<template wx:else is='movieIndex' data='{{movie:movie,rt:true}}' />
+      </block>
+			</view>
 </view>
