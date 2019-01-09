@@ -4,13 +4,18 @@
     "pages/logs/logs",
     "pages/tabBar/movie/movie",
     "pages/tabBar/cinema/cinema",
-    "pages/tabBar/mine/mine"
+    "pages/tabBar/mine/mine",
+    "pages/template/btn/btn",
+    "pages/template/movieIndex/movieIndex",
+    "pages/template/movieComingList/movieComingList"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#e54847",
     "navigationBarTitleText": "猫眼电影",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": true
   },
   "tabBar": {
     "color": "#696969",

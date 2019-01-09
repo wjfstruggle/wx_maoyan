@@ -21,3 +21,23 @@ button::after{
     overflow: hidden;
     white-space: nowrap;
 }
+/* btn */
+#movieList .box_btn .btn_buy,
+#movieList .box_btn .btn_presell,
+#movieList .box_btn .want-see{
+    width: 94rpx;
+    height: 54rpx;
+    line-height: 56rpx;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 10rpx;
+    white-space: nowrap;
+    font-size: 24rpx;
+    cursor: pointer;
+    padding: 0;
+}
+.scroll-view_H{
+  white-space: nowrap;
+  width: 100%;
+}
