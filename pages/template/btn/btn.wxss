@@ -1,0 +1,14 @@
+/* pages/template/btn/btn.wxss */
+.box_btn .btn {
+    width: 94rpx;
+    height: 54rpx;
+    line-height: 56rpx;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #f03d37;
+    color: #fff;
+    border-radius: 8rpx;
+    white-space: nowrap;
+    font-size: 24rpx;
+    cursor: pointer;
+}

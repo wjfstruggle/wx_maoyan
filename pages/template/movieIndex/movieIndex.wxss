@@ -1,0 +1,91 @@
+#movieList .list-item {
+  position: relative;
+  display: flex;
+  padding-left: 15px;
+  background-color: #fff;
+}
+#movieList .image {
+  margin-top: 12px;
+  width: 128rpx;
+  height: 180rpx;
+  overflow: hidden;
+}
+#movieList .image image {
+  width: 100%;
+}
+#movieList .content {
+  padding: 12px 14px 12px 0;
+  margin-left: 8px;
+  height: 90px;
+  max-height: 90px;
+  position: relative;
+}
+#movieList .content .nm-wrap {
+  display: flex;
+  max-height: 24px;
+  margin-bottom: 5px;
+  line-height: 44rpx;
+  overflow: hidden;
+}
+#movieList .content .nm-wrap .nm {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 700;
+  padding-right: 5px;
+  flex-shrink: 1;
+}
+#movieList .content .nm-wrap .icon-2d,
+#movieList .content .nm-wrap .icon-3d {
+  background-repeat:  no-repeat;
+  width: 86rpx;
+  height: 28rpx;
+  background-size: 86rpx 28rpx;
+  margin-top: 5px;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  margin-left: 3px;
+}
+#movieList .content .nm-wrap .icon-2d {
+  background-image: url(http://edu.bluej.cn/public/uploads/20190104/201901042139182d.png);
+}
+#movieList .content .nm-wrap .icon-3d {
+  background-image: url(http://edu.bluej.cn/public/uploads/20190104/201901042140423d.png);
+}
+#movieList .info {
+  box-sizing: border-box;
+  line-height: 1;
+  overflow: hidden;
+}
+#movieList .info .text {
+  font-size: 26rpx;
+  color: #666;
+}
+#movieList .info .sc {
+  margin-left: 5px;
+  font-weight: 700;
+  color: #faaf00;
+  font-size: 30rpx;
+}
+#movieList .info .star,
+#movieList .info .showInfo {
+  width: 400rpx;
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 6px;
+  line-height: 30rpx;
+}
+#movieList .box_btn{
+  position: absolute;
+  top: 50%;
+  margin-left: 440rpx;
+  transform: translateY(-50%)
+}
+#movieList .box_btn .btn_buy {
+  background-color: #f03d37;
+}
+#movieList .box_btn .btn_presell {
+  background-color: #3c9fe6;
+}
+#movieList .box_btn .want-see {
+  background-color: #faaf00;
+}

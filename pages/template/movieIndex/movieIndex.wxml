@@ -1,0 +1,37 @@
+<!-- 电影首页模板 -->
+<template name="movieIndex">
+  <view class="list-item">
+    <view class="image">
+      <image class="" src="{{movie.img}}" mode="widthFix"></image>
+    </view>
+    <view class="content">
+      <view class="nm-wrap">
+        <text class="nm">{{movie.nm}}</text>
+        <view class="icon-2d" wx:if="{{movie.version == 'v2d imax'}}"></view>
+        <view class="icon-3d" wx:elif="{{movie.version == 'v3d imax'}}"></view>
+        <view wx:else="{{movie.version == ''}}"></view>
+      </view>
+      <view class="info">
+        <view class="sore">
+          <view wx:if='{{movie.globalReleased}}'>
+            <text class="text" wx:if='{{movie.sc}}'>观众评<text class='sc'>{{movie.sc}}</text>
+            </text>
+            <text wx:else class="text">暂无评分</text>
+          </view>
+          <view wx:else>
+            <text class='sc'>{{movie.wish}}</text>
+            <text class="text">人想看</text>
+          </view>
+          <view class="star textOverflow">{{movie.star}}</view>
+          <view class="showInfo" wx:if='{{rt}}'>{{movie.rt}}上映</view>
+          <view class="showInfo" wx:else>{{movie.showInfo}}</view>
+        </view>
+      </view>
+      <view class="box_btn">
+        <button class="btn_buy" wx:if="{{movie.showst===3}}">购买</button>
+        <button wx:elif='{{movie.showst===1}}' class='want-see'>想看</button>
+        <button class="btn_presell" wx:elif='{{movie.showst===4}}'>预售</button>
+      </view>
+    </view>
+  </view>
+</template>

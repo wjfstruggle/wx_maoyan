@@ -1,0 +1,9 @@
+<!-- 按钮 -->
+
+<template name="btn">
+  <view class='box_btn'>
+    <button class="btn" hover-class="button-hover" hover-stop-propagation="false">
+      购买
+    </button>
+  </view>
+</template>
