@@ -37,19 +37,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "movie",
+					"id": 0,
+					"name": "movieDetail",
 					"pathName": "pages/tabBar/movie/movie",
-					"query": "id = 1"
-				},
-				{
-					"id": -1,
-					"name": "btn",
-					"pathName": "pages/template/btn/btn",
-					"query": "name = ntn"
+					"query": "name"
 				}
 			]
 		}

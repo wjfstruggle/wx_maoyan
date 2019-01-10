@@ -7,7 +7,9 @@
     "pages/tabBar/mine/mine",
     "pages/template/btn/btn",
     "pages/template/movieIndex/movieIndex",
-    "pages/template/movieComingList/movieComingList"
+    "pages/template/cinemaList/cinemaList",
+    "pages/subPages/movieDetail/movieDetail",
+    "pages/template/bordertemp/bordertemp"
   ],
   "window": {
     "backgroundTextStyle": "dark",

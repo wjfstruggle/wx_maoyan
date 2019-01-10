@@ -3,17 +3,17 @@
 <import src="../../template/btn/btn.wxml" />
 <!-- 首页 -->
 <import src="../../template/movieIndex/movieIndex.wxml" />
-<view id="movieList" hover-class="none" hover-stop-propagation="false">
-		<view class="top_wrap" hover-class="none" hover-stop-propagation="false">
-				<view class="city" hover-class="none" hover-stop-propagation="false">
+<view id="movieList">
+		<view class="top_wrap">
+				<view class="city">
 						<text>广州</text>
 						<text class="icon"></text>
 				</view>
-				<view class="hotShow" hover-class="none" hover-stop-propagation="false">
+				<view class="hotShow">
 						<text class='hot {{switchItem===0 ? "active" :""}}' data-item='{{0}}' bind:tap="selectItem">正在热映</text>
 						<text class='hot {{switchItem===1 ? "active" :""}}' data-item='{{1}}' bind:tap="selectItem">即将上映</text>
 				</view>
-				<view class="" hover-class="none" hover-stop-propagation="false">搜索</view>
+				<view class="">搜索</view>
 		</view>
 		<view class="list-wrapp">
 			<view hidden="{{switchItem===1}}">
@@ -25,7 +25,7 @@
 						<scroll-view class='scroll-view_H' scroll-x
 							bindscrolltolower="lower">
 							<view class="scroll_view textOverflow" wx:for="{{mostExpectedList}}" wx:for-item="list" wx:key="index">
-									<view class="img" hover-class="none" hover-stop-propagation="false">
+									<view class="img">
 										<image src='{{list.img}}' class='poster' mode="widthFix" lazy-load='{{true}}'></image>
 									</view>
 									<view class='name textOverflow'>{{list.nm}}</view>

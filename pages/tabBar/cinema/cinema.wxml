@@ -1,2 +1,15 @@
-<!--pages/tabBar/cinema/cinema.wxml-->
-<text>pages/tabBar/cinema/cinema.wxml</text>
+<import src="../../template/cinemaList/cinemaList.wxml" />
+<!--影院信息-->
+<view id="cinemaList">
+  <view class="top_wrap">
+    <view class="city">
+        <text>广州</text>
+        <text class="icon"></text>
+    </view>
+  </view>
+  <!-- cinemas列表模板 -->
+  <view class="">
+    <template is="cinema-section"  wx:for="{{cinemaList}}" wx:for-item="cinema" wx:key="index" data="{{cinema:cinema}}">
+    </template>
+  </view>
+</view>
