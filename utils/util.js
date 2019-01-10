@@ -14,6 +14,17 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const dayTime =() =>{
+  let date = new Date();
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  month = month < 10 ? '0'+ month : month;
+  day = day < 10 ? '0'+ day : day;
+  return year + '-' + month + '-' + day;
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  dayTime: dayTime
 }
